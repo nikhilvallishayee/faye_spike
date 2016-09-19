@@ -7,7 +7,7 @@ require_relative 'config/environment'
 
 console = ActiveSupport::Logger.new($stdout)
 console.formatter = Rails.logger.formatter
-console.level = Rails.logger.level
+console.level = Logger::INFO
 
 Rails.logger.extend(ActiveSupport::Logger.broadcast(console))
 
