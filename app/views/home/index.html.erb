@@ -3,19 +3,21 @@
 <br/>
 <br/>
 <br/>
-  <table>
+  <table id="myTable">
     <tbody>
       <tr>
         <th>Service-Quality</th>
         <th>Average-Response-Time</th>
         <th>Maximum-Response-Time</th>
         <th>Run-Time</th>
+        <th>Generated At</th>
       </tr>
       <tr>
-        <td id="servicequality"></td>
-        <td id="averageresponsetime"></td>
-        <td id="maximumresponsetime"></td>
-        <td id="runtime"></td>
+        <td id="servicequality"><%= @push.result["Service-Quality"] %></td>
+        <td id="averageresponsetime"><%= @push.result["Average-Response-Time"] %></td>
+        <td id="maximumresponsetime"><%= @push.result["Maximum-Response-Time"] %></td>
+        <td id="runtime"><%= @push.result["Run-Time"] %></td>
+        <td id="generatedtime"><%= @push.generated_time %></td>
       </tr>
 
     </tbody>

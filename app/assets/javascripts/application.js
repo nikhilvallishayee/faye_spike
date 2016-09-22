@@ -13,13 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require faye
 //= require_tree .
-$(function() {
-  var faye = new Faye.Client('http://localhost:9292/faye');
-  faye.subscribe("/performance", function(data) {
-    $('#servicequality').text(data['Service-Quality']);
-    $('#averageresponsetime').text(data['Average-Response-Time']);
-    $('#maximumresponsetime').text(data['Maximum-Response-Time']);
-    $('#runtime').text(data['Run-Time']);
-  });
-});

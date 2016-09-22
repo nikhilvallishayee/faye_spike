@@ -1,0 +1,21 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  reconnect: false
+  database: faye_spike_dev
+  pool: 5
+  username: 
+  password: 
+  host: localhost
+  port: 5432
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  reconnect: false
+  database: faye_spike_test
+  pool: 5
+  username: 
+  password: 
+  host: localhost
+  port: 5432

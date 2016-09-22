@@ -2,13 +2,16 @@ require 'eventmachine'
 
 require 'net/http'
 
+require 'json'
+
 class PushController < ApplicationController
 
   def create
-    #data need to be saved on fetching 
-    # message = {:channel => '/foo', :data => params['message'] }
-    # uri = URI.parse("http://localhost:9292/faye")
-    # Net::HTTP.post_form(uri, :message => message.to_json)
-    # render :nothing => true, :status => 201
+    result = JSON.parse(params[:hash])
+    @push = Push.new()
+    @push.generated_time = params["generated_time"]
+    @push.result = result
+    @push.save!
+    render :nothing => true, :status => 201
   end
 end
