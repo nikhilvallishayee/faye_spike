@@ -10,6 +10,8 @@
         <th>Average-Response-Time</th>
         <th>Maximum-Response-Time</th>
         <th>Run-Time</th>
+        <th>Environment</th>
+        <th>Type</th>
         <th>Generated At</th>
       </tr>
       <tr>
@@ -17,6 +19,8 @@
         <td id="averageresponsetime"><%= @push.result["Average-Response-Time"] %></td>
         <td id="maximumresponsetime"><%= @push.result["Maximum-Response-Time"] %></td>
         <td id="runtime"><%= @push.result["Run-Time"] %></td>
+        <td id="runtime"><%= @push.env %></td>
+        <td id="runtime"><%= @push.test_type %></td>
         <td id="generatedtime"><%= @push.generated_time %></td>
       </tr>
 
